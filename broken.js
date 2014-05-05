@@ -26,7 +26,7 @@
  		if(typeof onFulfilled !== 'function'){
  			throw 'The method when this promise is fulfilled must be a function';
  		}
- 		
+
  		if(typeof onRejected === 'object'){
  			context = onRejected;
  			onRejected = null;
@@ -77,3 +77,10 @@
 
  	return _public;
  }(this));
+
+// Add AMD compatibility
+if(typeof define === 'function' && define.amd){
+	define('broken-promise', [], function(){
+		return P;
+	});
+}
