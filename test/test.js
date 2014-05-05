@@ -1,4 +1,4 @@
-module('Sync Tests')
+module('Sync Tests');
 test('P will resolve after explicit resolution', function(){
 	expect(2);
 	
@@ -17,7 +17,7 @@ test('P will reject after explicit rejection', function(){
 	
 	var promise = new P();
 
-	promise.then(function(resolution){
+	promise.then(function(){
 		ok(false, 'The promise should not be resolved');
 	}, function(){
 		ok(true, 'The promise was rejected');
@@ -57,7 +57,7 @@ test('P will accept multiple callbacks', function(){
 	promise.resolve(5);
 });
 
-module('Async Tests')
+module('Async Tests');
 asyncTest('P will resolve asynchronously after explicit resolution', function(){
 	expect(2);
 	

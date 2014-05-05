@@ -13,17 +13,20 @@
  	} else {
  		return new P();
  	}
- }
+ };
 
  P.prototype = (function(window){
  	var _public = {};
 
  	_public.state = function(){
  		return this.currentState;
- 	}
+ 	};
 
  	_public.then = function(onFulfilled, onRejected, context){
- 		if(typeof onFulfilled !== 'function') throw 'The method when this promise is fulfilled must be a function';
+ 		if(typeof onFulfilled !== 'function'){
+ 			throw 'The method when this promise is fulfilled must be a function';
+ 		}
+ 		
  		if(typeof onRejected === 'object'){
  			context = onRejected;
  			onRejected = null;
@@ -62,7 +65,7 @@
  		}
 
  		return this;
- 	}
+ 	};
 
  	_public.isResolved = function(){
  		return this.state() === 'resolved';
