@@ -1,0 +1,21 @@
+{
+  "name": "broken-promises",
+  "version": "0.1.0",
+  "homepage": "https://github.com/keisans/broken-promises",
+  "authors": [
+    "Ryan Struhl <rwstruhl@gmail.com>"
+  ],
+  "description": "A state response library",
+  "main": "broken.js",
+  "keywords": [
+    "Promise"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
